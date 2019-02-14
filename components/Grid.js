@@ -1,6 +1,6 @@
 import React from 'react';
 import Number from '../components/Number'
-import { fizzleBuzz } from '../util/fizzBuzz';
+import {fizzBuzz, fizzleBuzz, fizzleBuzzle} from '../util/fizzBuzz';
 import styled from 'styled-components';
 
 const StyledGrid = styled.div`
@@ -13,7 +13,12 @@ const StyledGrid = styled.div`
 const Grid = props => {
   return (
     <StyledGrid>
-      {fizzleBuzz(50).map((output, i) => (<Number key={i} number={output}/>))}
+      {/*fizzBuzz(100).map((output, i) => (<Number key={i} number={output}/>)*/}
+      {fizzleBuzz(15, 5, 10).map((output, i) => (<Number key={i} number={output}/>))}
+      {/* {fizzleBuzzle(20, [3, 5, 11], ['M', 'Q', 'O']).map((output, i) => (<Number key={i} number={output}/>))} */}
+      {/* {fizzleBuzzle(75, [3, 11], ["Wow", "Cool"]).map((output, i) => 
+        (<Number key={i} number={output}/>)
+      )} */}
     </StyledGrid>
   )
 }
